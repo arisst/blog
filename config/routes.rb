@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home/index' 
 
   resources :articles do
     resources :comments
@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   get 'articles' => 'articles#index'
   get 'articles/:id' => 'articles#show'
+
+  get 'news/:id-:title' => 'articles#show', as: :read
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

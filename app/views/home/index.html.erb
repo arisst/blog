@@ -1,2 +1,82 @@
-<h1>Home</h1>
-<p><%= link_to 'My blog', controller: 'articles' %></p>
+<div class="container">
+
+  <!-- Masthead
+  ================================================== -->
+  <header>
+    
+<%= render 'layouts/toppanel' %>
+<%= render 'layouts/navbar' %>
+    
+
+
+  </header>    
+
+
+
+<%= render 'layouts/blog' %>
+<%= render 'layouts/footer' %>
+  
+  </div><!-- /container -->
+
+
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <%= javascript_include_tag 'jquery.easing.1.3', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'superfish', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.tweet', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jflickrfeed.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.flexslider-min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.fitvid', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.prettyPhoto', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.preloader', 'data-turbolinks-track' => true %>
+  
+    <!-- Support CSS3 Media Queries for IE 6-8 -->
+  <%= javascript_include_tag 'respond.min', 'data-turbolinks-track' => true %>
+
+  <script>
+    jQuery.noConflict()(function($){
+      $('.blog-carousel').flexslider({
+          animation: "slide",
+            controlNav: false,
+          animationLoop: false,
+          slideshow: false,
+          touch: true,
+          itemWidth: 160,
+          itemMargin: 5,
+          asNavFor: '.blog-slider'
+        });
+   
+      $('.blog-slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        touch: true,
+        sync: ".blog-carousel"
+      });
+    });
+  </script>
+
+  <%= javascript_include_tag 'custom', 'data-turbolinks-track' => true %>
+
+	<!-- For Images Preloading -->
+	<script type="text/javascript">var runFancy = true;</script>
+	
+    <!--[if IE]>
+    <script type="text/javascript">
+      runFancy = false;
+    </script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+      if (runFancy) {
+        jQuery.noConflict()(function($){
+          $(".view").preloader();
+          });
+        };
+	</script>
+

@@ -1,0 +1,236 @@
+<!-- Blog
+  ================================================== -->
+    <div class="row entry-blog">
+	  <div class="span9">
+	  
+    	<!-- START POST #4 SLIDESHOW -->
+	    <div class="row entry-post">
+
+		<!-- Popular Posts -->
+		<div class="span3">
+		    <div class="widget well">
+		      <h5>Berita Terbaru</h5>
+			  <ul class="popular-posts">
+			    <% @articles.each do |article| %>
+			    	<li>
+				    	<a href="#"><img src="<%= asset_path("img/blog/widgets/img01-40x40.jpg") %>" alt="" /></a>
+			    		<%= link_to article.title, read_url(article, article.title.parameterize) %>
+			    		<span class="date"><%= article.created_at.strftime("%B %e, %Y") %></span>
+			    	</li>
+			    <% end %>
+
+			  </ul>
+		    </div><!-- widget -->
+	    </div>
+	  
+	      <!-- POST FORMAT - SLIDESHOW -->
+	      <div class="span6">
+	        <div class="row">
+	          <div class="span6 format-slideshow">
+	            <div class="thumb-post view">
+				  <div class="blog-slider flexslider clearfix">
+        			<ul class="slides">
+          			  <li>
+            			<img src="<%= asset_path("img/blog/img03.jpg") %>" alt="" />
+          			  </li>
+          			  <li>
+            			<img src="<%= asset_path("img/blog/img02.jpg") %>" alt="" />
+          			  </li>
+          			  <li>
+            			<img src="<%= asset_path("img/blog/img01.jpg") %>" alt="" />
+          			  </li>
+          			  <li>
+            			<img src="<%= asset_path("img/blog/img05.jpg") %>" alt="" />
+          			  </li>
+    				  <li>
+      				    <img src="<%= asset_path("img/blog/img04.jpg") %>" alt="" />
+    				  </li>
+    				  <li>
+      				    <img src="<%= asset_path("img/blog/img06.jpg") %>" alt="" />
+    				  </li>
+        			</ul>
+      			  </div><!-- blog-slider -->
+	              <div class="post-date-meta">
+                	<span class="month">July</span>
+              		<span class="date">02</span>
+            	  </div><!-- post-date-meta -->
+	        	</div><!-- thumb-post -->
+				<div class="blog-carousel flexslider">
+				  <ul class="slides">
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img03.jpg") %>" alt="" />
+    				</li>
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img02.jpg") %>" alt="" />
+    				</li>
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img01.jpg") %>" alt="" />
+    				</li>
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img05.jpg") %>" alt="" />
+    				</li>
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img04.jpg") %>" alt="" />
+    				</li>
+    				<li>
+      				  <img src="<%= asset_path("img/blog/img06.jpg") %>" alt="" />
+    				</li>
+				  </ul>
+				</div><!-- carousel -->
+	        	<div class="entry-text">
+	        	  <h3><a href="blog-post.html">Slideshow Post Format</a></h3>
+	        	  <p>Vestibulum vitae tellus a turpis accumsan egestas et non nulla. Phasellus lacinia semper aliquam. Proin ipsum enim, fringilla quis vulputate ut, auctor vestibulum magna. Phasellus non eros vel dui ornare pulvinar. Proin eget magna et orci pellentesque rutrum et at turpis. Nam ut turpis eget odio varius rhoncus.</p>
+	        	  <a class="btn" href="blog-post.html">Read more</a>
+	        	</div><!-- entry-text -->
+	          </div><!-- span6 -->
+	        </div><!-- row -->
+	      </div><!-- span6 -->
+	    </div><!-- row -->
+	    
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #4 -->
+
+
+		<!-- ============================================================================================= -->
+
+
+		<!-- ============================================================================================= -->
+
+
+    	<!-- START POST #6 QUOTE -->    	
+	    <div class="row entry-post">
+  	      <div class="span3">
+	        <div class="entry-meta clearfix">
+	          <span><strong><i class="icon-user"></i> Author:</strong> <a href="#">ZERGE</a></span>
+	          <span><strong><i class="icon-comment"></i> Comments:</strong> <a href="#">1</a></span>
+	          <span><strong><i class="icon-list-alt"></i> Category:</strong> <a href="#">Quote</a></span>	      
+	          <span><strong><i class="icon-tags"></i> Tags:</strong></span>
+	          <ul class="tags clearfix">
+      	        <li><a href="#">quote</a></li>
+	            <li><a href="#">copyright</a></li>
+		      </ul>
+	        </div><!-- entry-meta -->
+	      </div><!-- span3 -->
+	  
+	      <!-- POST FORMAT - QUOTE -->
+	      <div class="span6">
+	        <div class="row">
+	          <div class="span6 format-video">
+	        	<div class="entry-text">
+				  <h3><a href="blog-post.html">Quote</a></h3>
+	        	  <blockquote cite="http://amour-discipline.org/zine/how-the-copyright-industry-drives-a-big-brother-dystopia/">
+	        	    <p>All too often I hear that the copyright industry doesn’t understand the Internet, doesn’t understand the net generation, doesn’t understand how technology has changed.</p>
+  					<small>Rick Falkvinge</small>
+	        	  </blockquote>
+	        	</div><!-- entry-text -->
+	          </div><!-- span6 -->
+	        </div><!-- row -->
+	      </div><!-- span6 -->
+	    </div><!-- row -->
+	    
+	    <!-- DIVIDER -->
+      	<div class="row margin40">
+      	  <div class="span3"><div class="border-5-1"></div></div>
+      	  <div class="span6"><div class="border-5-1 hide-border"></div></div>
+    	</div><!-- row -->
+  	 	<!-- END POST #6 -->
+
+	    <!-- PAGINATION  -->
+       	<div class="row margin40">
+      	  <div class="span3"><p></p></div>
+      	  <div class="span6">
+      	    <div class="pagination">
+              <ul>
+                <li><a href="#"></a></li>
+            	<li class="active"><a href="#">1</a></li>
+            	<li><a href="#">2</a></li>
+            	<li><a href="#">3</a></li>
+            	<li><a href="#">4</a></li>
+            	<li class="disabled"><a href="#">...</a></li>
+            	<li><a href="#">10</a></li>
+            	<li><a href="#"></a></li>
+          	  </ul>
+        	</div><!-- pagination -->
+      	  </div><!-- span6 -->
+    	</div><!-- row -->
+
+
+
+	  </div><!-- span9 -->
+
+
+  	  <!-- ============================================================================================= -->
+
+
+	  <!-- SIDEBAR -->
+      <div class="span3 sidebar">
+        <div class="widget well">
+          <form method="get" id="searchform" action="http://html.color-theme.com/linkup">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-search"></i></span><input class="search-box" id="search-box" type="text" name="name" value="To search type and hit enter" onFocus="if(this.value=='To search type and hit enter')this.value='';" onBlur="if(this.value=='')this.value='To search type and hit enter';">
+        	</div>
+          </form>
+        </div><!-- widget -->
+
+	    <!-- About -->
+        <div class="widget well">
+          <h5>About</h5>
+          <p class="last">Claystone is <span class="label">Responsive</span> HTML Template, makes perfect for a variety of purposes, although focused towards Photographers and those using Portfolios to display their past and present work collections.</p>
+		</div><!-- .widget -->
+
+		<!-- Categories -->
+        <div class="widget widget-list well">
+          <h5>Categories</h5>
+          <ul class="nav nav-list">
+          <li><a href="#"><i class="icon-list-alt"></i> Home</a></li>
+          <li><a href="#"><i class="icon-list-alt"></i> Library</a></li>
+          <li><a href="#"><i class="icon-list-alt"></i> Applications</a></li>
+          <li><a href="#"><i class="icon-list-alt"></i> Misc</a></li>
+        </ul>
+        </div><!-- widget -->
+
+		<!-- Popular Posts -->
+	    <div class="widget well">
+	      <h5>Popular Posts</h5>
+		  <ul class="popular-posts">
+		    <li>
+		      <a href="#"><img src="<%= asset_path("img/blog/widgets/img01-40x40.jpg") %>" alt="" /></a>
+		      <a href="#">Domino Theory</a>
+		      <span class="date">June 24, 2012</span>
+		    </li>
+		    <li>
+		      <a href="#"><img src="<%= asset_path("img/blog/widgets/img02-40x40.jpg") %>" alt="" /></a>
+		      <a href="#">Crossing Paths</a>
+		      <span class="date">June 22, 2012</span>
+		    </li>
+		    <li>
+		      <a href="#"><img src="<%= asset_path("img/blog/widgets/img03-40x40.jpg") %>" alt="" /></a>
+		      <a href="#">Corporate Equality Index</a>
+		      <span class="date">May 09, 2012</span>
+		    </li>
+		  </ul>
+	    </div><!-- widget -->
+	    
+	    <!-- Popular tags -->
+        <div class="widget well">
+          <h5>Popular tags</h5>
+		  <ul class="tags clearfix">
+      	    <li><a href="#">quote</a></li>
+	        <li><a href="#">copyright</a></li>
+	        <li><a href="#">brand</a></li>
+	        <li><a href="#">tag</a></li>
+	        <li><a href="#">design</a></li>
+	        <li><a href="#">graphics</a></li>
+	        <li><a href="#">battle</a></li>
+	        <li><a href="#">envato</a></li>
+		  </ul>
+          <small><a href="#">View all tags</a></small>
+		</div><!-- .widget -->
+		
+	
+      </div><!-- span3 -->
+	</div><!-- row -->
